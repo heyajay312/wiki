@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+
+{{ entry|safe }}
+
+<div style="margin-right: 20px;">
+
+    <label for="edit" class="form-label">Edit</label>
+    <a id = "edit" href="{% url 'edit' title %}">
+        <img src="../../static/encyclopedia/pencil.png" alt="edit" style="width: 20px; margin-left: 5px;">
+    </a>
+</div>
+
+{% endblock %}
